@@ -1,0 +1,31 @@
+<ion-content [scrollEvents]="true">
+<ion-list *ngFor="let monument of monuments">
+
+  <ion-item  >
+    <h2 class="abc"> Nom : {{ monument.nom }}</h2>
+	
+  </ion-item>
+  <ion-item>
+    <h3 class="aaa"> latitude : {{ monument.latitude }}</h3>
+	
+  </ion-item>
+  <ion-item>
+    <h3 class="aaa">longitude :{{ monument.longitude }}</h3>
+	
+  </ion-item>
+  <ion-item>
+    <h4 class="aaa">Ville :{{ monument.ville }}</h4>
+	
+  </ion-item>
+  <ion-item>
+    <img src="assets/images/{{monument.img}}"/>
+  </ion-item>
+  
+  <h5 class="ccc">-----------------------------------------------------------------</h5>
+	    
+
+	
+
+
+</ion-list>
+</ion-content>

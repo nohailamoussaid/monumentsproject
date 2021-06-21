@@ -1,0 +1,40 @@
+<ion-header color="primary" >
+  <ion-toolbar>
+    <ion-title>monumentschaqueville</ion-title>
+  </ion-toolbar>
+  <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/villes"></ion-back-button>
+    </ion-buttons>
+</ion-header>
+
+<ion-content color="primary" [scrollEvents]="true">
+  <ion-list *ngFor="let monument of monuments">
+  
+    <ion-item>
+      <h2>{{ monument.nom }}</h2>
+    
+    </ion-item>
+    <ion-item>
+      <h3>{{ monument.latitude }}</h3>
+    
+    </ion-item>
+    <ion-item>
+      <h3>{{ monument.longitude }}</h3>
+    
+    </ion-item>
+    <ion-item>
+      <h4>{{ monument.ville }}</h4>
+    
+    </ion-item>
+    <ion-item>
+      <img src="assets/images/{{monument.img}}"/>
+    
+    </ion-item>
+    
+        
+  
+    
+  
+  
+  </ion-list>
+  </ion-content>

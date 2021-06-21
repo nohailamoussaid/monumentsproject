@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    
+      <ion-title> Monuments du Maroc </ion-title>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="sign-in-content">
+
+  <ion-item>
+    <img src="assets/images/imagemaroc.jpg"/>
+	
+  </ion-item>
+  <form [formGroup]="signInForm" (ngSubmit)="signInWithEmail()">
+    <ion-list class="inputs-list" lines="full">
+      <ion-item class="input-item">
+        <ion-input type="email" placeholder="Entrer Votre Email" formControlName="email" clearInput autocapitalize="off" inputmode="email"></ion-input>
+      </ion-item>
+      <div class="error-container">
+        <ng-container *ngFor="let validation of validation_messages.email">
+          <div class="error-message" *ngIf="signInForm.get('email').hasError(validation.type) && (signInForm.get('email').dirty || signInForm.get('email').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <span>{{ validation.message }}</span>
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item class="input-item">
+        <ion-input type="password" placeholder="Entrez Votre Password" formControlName="password"></ion-input>
+      </ion-item>
+      <div class="error-container">
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div class="error-message" *ngIf="signInForm.get('password').hasError(validation.type) && (signInForm.get('password').dirty || signInForm.get('password').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <span>{{ validation.message }}</span>
+          </div>
+        </ng-container>
+      </div>
+    </ion-list>
+
+    <ion-button color="danger" shape="round" fill="outline" class="sign-in-btn" type="submit" expand="block" [disabled]="!signInForm.valid"> Entrer </ion-button>
+    <div class="error-container" *ngIf="submitError">
+      <div class="error-message">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        <span>{{ submitError }}</span>
+      </div>
+    </div>
+   
+      <ion-button color="danger" shape="round" fill="outline" expand="block" class="sign-up-btn"  [routerLink]="['/sign-up']">
+      Nouveau compte 
+      </ion-button>
+   
+  </form>
+</ion-content>

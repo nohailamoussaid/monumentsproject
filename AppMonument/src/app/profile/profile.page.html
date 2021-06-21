@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+</ion-header>
+<ion-content class="profile-content">
+  <ion-row class="user-details-wrapper">
+    <ion-col size="12" class="user-image-wrapper">
+      <img class="user-image" [src]="user.image">
+        <h3> Bienvenue Cher utilisateur </h3>
+      
+    </ion-col>
+ 
+  <ion-col size="10">
+    <h4>Directionnez-vous vers nos Monument:</h4>
+     
+      <ion-button shape="round" color="danger" expand="block" fill="outline"  [routerLink]="['/tabs/monument']">Afficher Monuments</ion-button>
+    </ion-col>
+    <ion-col size="10">
+      <h4>Directionnez-vous vers Nos Monuments suivant leurs Ville :</h4>
+       
+        <ion-button shape="round" color="danger" expand="block" fill="outline" [routerLink]="['/tabs/villes']">Afficher Villes</ion-button>
+      </ion-col>
+
+    <ion-col size="10">
+      <h4>Souhaitez-vous quitter l'application : </h4>
+      <ion-button shape="round" color="danger" expand="block" fill="outline"  (click)="signOut()">Sign out</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

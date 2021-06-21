@@ -1,0 +1,72 @@
+.sign-up-content {
+  text-align: center;
+  --padding-bottom: 16px;
+  --padding-end: 16px;
+  --padding-start: 16px;
+  --padding-top: 16px;
+  --color: var(--ion-color-danger);
+  
+
+  .auth-title {
+    font-weight: bold;
+    margin-bottom: 64px;
+    letter-spacing: 0.6px;
+  }
+
+  .social-auth-options {
+    .options-divider {
+  		text-align: center;
+    }
+  }
+
+  .inputs-list {
+    .input-item {
+      --padding-start: 0px;
+      --padding-end: 0px;
+      --inner-padding-end: 0px;
+      --color: var(--ion-color-dark);
+      --align-items: center;
+      --display: flex;
+      
+    }
+  }
+
+  .error-container {
+    .error-message {
+      margin: 16px 0px;
+      display: flex;
+      align-items: center;
+      color: var(--ion-color-danger);
+      font-size: 14px;
+
+      ion-icon {
+        font-size: 16px;
+        padding-inline-end: 8px;
+        color: aqua;
+      }
+    }
+  }
+
+  .sign-up-btn {
+    margin: 16px 0px;
+    color: var(--ion-color-danger)
+  }
+
+  .sign-in-btn-wrapper {
+    justify-content: flex-end;
+    align-items: center;
+   
+    position:absolute;
+
+    .sign-in-btn {
+      margin: 16px 0px;
+      color: var(--ion-color-danger);
+      padding-right: 10px;
+      padding-bottom: 200px;
+      padding-block-end: 10px;
+     
+     
+     ;
+    }
+  }
+}
